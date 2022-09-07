@@ -87,10 +87,15 @@ const works = [
   },
 
 ];
-// const deleteAllMuseums = db.prepare(`
-// DROP TABLE IF EXISTS museums;
-// `);
-// deleteAllMuseums.run()
+const deleteAllWorks=db.prepare(`
+DROP TABLE IF EXISTS works;
+`)
+deleteAllWorks.run()
+
+const deleteAllMuseums = db.prepare(`
+DROP TABLE IF EXISTS museums;
+`);
+deleteAllMuseums.run()
 
 
 
@@ -115,10 +120,10 @@ for (let museum of museums) {
 }
 
 //Create databese for Works
-const deleteAllWorks=db.prepare(`
-DROP TABLE IF EXISTS works;
-`)
-deleteAllWorks.run()
+// const deleteAllWorks=db.prepare(`
+// DROP TABLE IF EXISTS works;
+// `)
+// deleteAllWorks.run()
 
 const createWorksTable = db.prepare(`
 CREATE TABLE IF NOT EXISTS works(
