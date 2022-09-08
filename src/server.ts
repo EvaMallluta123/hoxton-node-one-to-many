@@ -36,7 +36,7 @@ VALUES
 `)
 
 const createWork=db.prepare(`
-INSERT INTO work
+INSERT INTO works
 (name, picture, museumId)
 VALUES
 (@name, @picture, @museumId)
